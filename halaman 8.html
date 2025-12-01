@@ -731,65 +731,529 @@
             transition: all 0.3s ease;
         }
         
+        /* Media query untuk PC (layar besar) */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1200px;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .input-section {
+                padding: 30px;
+            }
+
+            .sentence-input {
+                padding: 18px 25px;
+                font-size: 1.2rem;
+            }
+
+            .analyze-btn {
+                padding: 18px 35px;
+                font-size: 1.2rem;
+            }
+
+            .diamond-analysis {
+                padding: 40px;
+            }
+
+            .diamond-analysis h2 {
+                font-size: 1.8rem;
+            }
+
+            .analysis-flow {
+                max-width: 900px;
+            }
+
+            .level-label {
+                width: 140px;
+                font-size: 1rem;
+            }
+
+            .analysis-item {
+                padding: 12px 18px;
+                font-size: 1.1rem;
+                min-width: 60px;
+            }
+
+            .sentence-item {
+                font-size: 1.4rem;
+                padding: 14px 30px;
+            }
+
+            .word-item {
+                font-size: 1.1rem;
+                padding: 12px 18px;
+            }
+
+            .syllable-item {
+                font-size: 1rem;
+                padding: 10px 14px;
+            }
+
+            .letter-item {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+                min-width: 40px;
+            }
+
+            .practice-section {
+                padding: 30px;
+            }
+
+            .practice-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .current-sentence {
+                font-size: 1.5rem;
+            }
+
+            .practice-instructions {
+                font-size: 1.1rem;
+            }
+
+            .practice-item {
+                padding: 12px 18px;
+                font-size: 1.1rem;
+                min-width: 60px;
+            }
+
+            .practice-blank {
+                min-width: 80px;
+                min-height: 50px;
+            }
+
+            .blank-option {
+                padding: 10px 14px;
+                font-size: 1rem;
+            }
+
+            .back-btn {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Media query untuk tablet dan mobile (layar sedang) */
         @media (max-width: 768px) {
             .container {
                 padding: 20px 15px;
             }
-            
+
             h1 {
                 font-size: 1.8rem;
             }
-            
+
             .input-group {
                 flex-direction: column;
+                gap: 15px;
             }
-            
+
+            .sentence-input {
+                padding: 14px 18px;
+                font-size: 1rem;
+            }
+
+            .analyze-btn {
+                padding: 14px 28px;
+                font-size: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .diamond-analysis {
+                padding: 25px;
+            }
+
+            .diamond-analysis h2 {
+                font-size: 1.4rem;
+            }
+
+            .analysis-flow {
+                max-width: 100%;
+            }
+
             .flow-level {
                 flex-direction: column;
-                gap: 5px;
+                gap: 8px;
+                padding: 8px 0;
             }
-            
+
             .level-label {
                 width: 100%;
                 text-align: center;
+                font-size: 0.95rem;
             }
-            
+
+            .level-content {
+                justify-content: center;
+                gap: 8px;
+            }
+
             .analysis-item {
                 padding: 8px 12px;
-                font-size: 0.8rem;
+                font-size: 0.85rem;
+                min-width: 45px;
             }
-            
+
             .sentence-item {
                 font-size: 1rem;
                 padding: 10px 20px;
             }
-            
-            .floating-books {
-                display: none;
+
+            .word-item {
+                font-size: 0.95rem;
+                padding: 9px 14px;
             }
-            
-            .practice-controls {
-                flex-direction: column;
-                align-items: center;
+
+            .syllable-item {
+                font-size: 0.9rem;
+                padding: 8px 12px;
             }
-            
-            .blank-options {
-                flex-wrap: wrap;
-                justify-content: center;
+
+            .letter-item {
+                font-size: 0.8rem;
+                padding: 6px 10px;
+                min-width: 35px;
             }
-            
+
+            .arrow-down,
+            .arrow-up {
+                height: 15px;
+            }
+
+            .analysis-explanation {
+                padding: 18px;
+            }
+
+            .analysis-explanation h3 {
+                font-size: 1.3rem;
+            }
+
+            .explanation-steps {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .explanation-step {
+                padding: 12px;
+            }
+
+            .step-text {
+                font-size: 0.85rem;
+            }
+
+            .practice-section {
+                padding: 20px;
+            }
+
+            .practice-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .current-sentence-container {
+                padding: 12px;
+            }
+
             .current-sentence {
                 font-size: 1.1rem;
             }
-            
+
             .current-sentence-label {
                 font-size: 0.9rem;
             }
-            
+
+            .practice-instructions {
+                font-size: 0.95rem;
+            }
+
+            .practice-flow {
+                max-width: 100%;
+            }
+
+            .practice-item {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+                min-width: 45px;
+            }
+
+            .practice-blank {
+                min-width: 65px;
+                min-height: 42px;
+            }
+
+            .practice-blank::after {
+                font-size: 1.1rem;
+            }
+
+            .arrow-with-options {
+                gap: 8px;
+            }
+
+            .blank-options {
+                width: 95%;
+                padding: 8px;
+                gap: 6px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .blank-option {
+                padding: 7px 10px;
+                font-size: 0.85rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .practice-controls {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .practice-btn {
+                padding: 10px 22px;
+                font-size: 0.95rem;
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .toggle-practice-btn {
+                padding: 10px 22px;
+                font-size: 0.95rem;
+            }
+
+            .back-btn {
+                padding: 10px 22px;
+                font-size: 0.95rem;
+            }
+
+            .floating-books {
+                display: none;
+            }
+
+            .cloud {
+                display: none;
+            }
+
             .sound-indicator {
                 width: 14px;
                 height: 14px;
                 font-size: 0.5rem;
+            }
+        }
+
+        /* Media query untuk HP kecil (layar sangat kecil) */
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 15px 10px;
+            }
+
+            .header {
+                margin-bottom: 20px;
+            }
+
+            .logo i {
+                font-size: 2.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .input-section {
+                padding: 18px;
+            }
+
+            .input-group {
+                gap: 12px;
+            }
+
+            .sentence-input {
+                padding: 12px 16px;
+                font-size: 0.95rem;
+            }
+
+            .analyze-btn {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+
+            .input-hint {
+                font-size: 0.85rem;
+            }
+
+            .diamond-analysis {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .diamond-analysis h2 {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+
+            .flow-level {
+                gap: 6px;
+                padding: 6px 0;
+            }
+
+            .level-label {
+                font-size: 0.9rem;
+            }
+
+            .analysis-item {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+                min-width: 40px;
+            }
+
+            .sentence-item {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            .word-item {
+                font-size: 0.85rem;
+                padding: 7px 12px;
+            }
+
+            .syllable-item {
+                font-size: 0.8rem;
+                padding: 6px 10px;
+            }
+
+            .letter-item {
+                font-size: 0.75rem;
+                padding: 5px 8px;
+                min-width: 30px;
+            }
+
+            .analysis-explanation {
+                padding: 15px;
+                margin-top: 20px;
+            }
+
+            .analysis-explanation h3 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+
+            .explanation-step {
+                padding: 10px;
+            }
+
+            .step-number {
+                width: 25px;
+                height: 25px;
+                font-size: 0.8rem;
+            }
+
+            .step-text {
+                font-size: 0.8rem;
+            }
+
+            .practice-section {
+                padding: 15px;
+                margin-top: 20px;
+            }
+
+            .practice-section h2 {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+
+            .current-sentence-container {
+                padding: 10px;
+                margin-bottom: 20px;
+            }
+
+            .current-sentence {
+                font-size: 1rem;
+            }
+
+            .current-sentence-label {
+                font-size: 0.85rem;
+            }
+
+            .practice-instructions {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+
+            .practice-item {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+                min-width: 40px;
+            }
+
+            .practice-blank {
+                min-width: 55px;
+                min-height: 38px;
+            }
+
+            .practice-blank::after {
+                font-size: 1rem;
+            }
+
+            .blank-options {
+                width: 100%;
+                padding: 6px;
+                gap: 4px;
+            }
+
+            .blank-option {
+                padding: 6px 8px;
+                font-size: 0.8rem;
+            }
+
+            .practice-result {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+
+            .practice-controls {
+                gap: 10px;
+            }
+
+            .practice-btn {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+                max-width: 180px;
+            }
+
+            .toggle-practice-btn {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+            }
+
+            .back-btn {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+                margin-top: 15px;
+            }
+
+            .sound-indicator {
+                width: 12px;
+                height: 12px;
+                font-size: 0.4rem;
             }
         }
     </style>
