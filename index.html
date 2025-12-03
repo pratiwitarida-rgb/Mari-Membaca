@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mari Membaca</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe Ui', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
@@ -89,7 +90,7 @@
         }
         
         .btn-start:active {
-            transform: translateY(0);
+            transform: translateY(0) scale(0.98);
             box-shadow: 0 5px 15px rgba(44, 127, 184, 0.4);
         }
         
@@ -106,6 +107,22 @@
         
         .btn-start:hover::after {
             left: 100%;
+        }
+        
+        .btn-start.click-effect {
+            animation: clickAnimation 0.3s ease;
+        }
+        
+        @keyframes clickAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
         
         .cloud {
@@ -212,7 +229,7 @@
         </button>
     </div>
 
- <script>
+    <script>
         // Fungsi untuk efek klik dan redirect
         function addClickEffectAndRedirect(element, url) {
             // Efek visual
